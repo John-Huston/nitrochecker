@@ -28,9 +28,6 @@
 
 
 
-
-<button id="myBtn">Open Modal</button>
-
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -48,57 +45,17 @@
  
 <div class="blocco2"><p id="code"></p></div>
 <div style="display: flex; justify-content: center;">
-<button id="start" onclick="startstop()">Start checker</button>
+<button id="start">Start checker</button>
 <p id="checked">Checked: 0</p>
 <p id="worked">Worked: 0</p>
 </div>
 <script>
-        var d=0;
-        var v=0;
-        function startstop(){
-        v++;
-        if(v%2==0){
-        document.getElementById('start').innerHTML ="Start checker"
-        }
-        else{
-        document.getElementById('start').innerHTML ="Stop checker"
-        }
-        }
-        function checker(){
-        
-        var result= '';
-    	var characters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    	var charactersLength = characters.length;
-    	for ( var i = 0; i < 16; i++ ) {
-      		result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  	        
-    	}
-    	if(v%2!=0){
-    	document.getElementById('code').className="";
-    	var fieldNameElement = document.getElementById('checked');
-    	d++;
-  	    fieldNameElement.innerHTML = "Checked: "+d;
-  	    
-        link="discord.gift/"
-  	    //document.getElementById("code").innerHTML+=link+result+"<br>";
-  	    var fieldNameElement = document.getElementById('code');
-    	
-  	    fieldNameElement.innerHTML = link+result;
-  	    }
-        }
-        setInterval(checker, 2000);
-        
-        function rosso(){
-        document.getElementById('code').className+="bianco";
-        }
-        setInterval(rosso,1000);
-        
         
         
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("start");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -123,4 +80,3 @@ window.onclick = function(event) {
   
 </body>
 </html>
-
